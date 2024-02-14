@@ -1,7 +1,7 @@
 const SearchPage = () => {
     return ( 
         <div className="">
-            CECI EST LA PAGE DES RECHERCHES ll
+            CECI EST LA PAGE DES RECHERCHES ll m
         </div>
      );
 }
