@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import {ClerkProvider } from "@clerk/nextjs";
+import { ToastProvider } from "@/components/providers/toaster-provider";
 
 
 
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="fr">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <ToastProvider/>
+          {children}
+          </body>
       </html>
     </ClerkProvider >
     
